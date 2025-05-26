@@ -115,6 +115,24 @@ const TorneioJogos = () => {
       ],
       icon: <Gamepad className="w-6 h-6" />,
       color: "neon-pink"
+    },
+     {
+      name: "Just Dance",
+      format: "Dança individual ",
+      time: "09:00 - 12:00",
+      turno: "manha",
+      location: "Biblioteca",
+      slots: 12,
+      style: "Dança",
+      image: "/assets/img/just-dance.jpg",
+      organizer: ["Vinicius Yan"],
+      conditions: [
+        "Modo de Jogo: Todas as partidas serão no modo individual (solo).",
+        "Seleção de Músicas: As músicas de cada fase serão definidas pela organização, podendo vir de uma lista prévia ou serem sorteadas, sempre na dificuldade padrão (a não ser que a organização indique outra).",
+        "Acessórios: O uso de acessórios ou roupas que atrapalhem o desempenho ou a leitura dos sensores pode ser restringido pela organização."
+      ],
+      icon: <Gamepad className="w-6 h-6" />,
+      color: "neon-pink"
     }
   ];
 

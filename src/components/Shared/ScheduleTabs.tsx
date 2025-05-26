@@ -21,7 +21,7 @@ const ScheduleTabs = ({ onTabChange }: ScheduleTabsProps) => {
           className={`tab-button ${activeTab === day ? "active" : ""}`}
           onClick={() => handleTabClick(day)}
         >
-          Dia {day}
+          Dia  {day}
         </button>
       ))}
     </div>

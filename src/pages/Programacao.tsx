@@ -26,13 +26,13 @@ const Programacao = () => {
       <section className="py-12">
 
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">
-          Cronograma da Semana da Computação
+          Programação da Semana da Computação
         </h1>
 
         <div className="flex flex-col items-center">
           <div className="mb-8">
             <span className="inline-block bg-event-lightblue text-event-blue px-4 py-1 rounded-full text-ls font-medium">
-              12 a 14 de Junho - IFMA campus Caxias
+              12 a 14 de Junho de 2025 - IFMA campus Caxias
             </span>
           </div>
         </div>

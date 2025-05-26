@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="mb-8">
           <span className="inline-block bg-event-lightblue text-event-blue px-4 py-1 rounded-full text-sm font-medium">
-            12 a 14 de Junho - IFMA campus Caxias
+            12 a 14 de Junho de 2025 - IFMA campus Caxias
           </span>
         </div>
         

@@ -12,7 +12,7 @@ const EventInfo = () => {
             </div>
             <div>
               <h3 className="font-semibold text-lg">Data</h3>
-              <p className="text-gray-600">12 a 14 de Junho</p>
+              <p className="text-gray-600">12 a 14 de Junho de 2025</p>
             </div>
           </div>
           

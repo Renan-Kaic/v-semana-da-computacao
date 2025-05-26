@@ -166,9 +166,9 @@ export const scheduleDay2: ScheduleItem[] = [
    {
     time: "15:00 - 16:00",
     location: "AUDITÓRIO 1",
-    activity: "Palestra Heloisa",
-    speakers: "Heloisa",
-    responsible: "Heloisa"
+    activity: "IA como Passaporte",
+    speakers: "Heloisa Guimarães Coelho",
+    responsible: "Heloisa Guimarães Coelho"
   },
    {
     time: "16:00 - 17:00",
@@ -246,7 +246,7 @@ export const MinicursosData = [
     title: "Circuitos Digitais",
     instructor: "Prof. Luis Claudio Mendes Chaves",
     day: "Dia 1-12/06/25 e Dia 2-13/06/25",
-    time: "14:00 - 18:00",
+    time: "14:00 -  18:00",
     location: "LAB Eletrônica",
     description: "Focada na lógica digital, esta oficina abordara o funcionamento de circuitos eletrônicos fundamentais como portas lógicas."
   },
@@ -321,7 +321,7 @@ export const lecturesData = [
     title: "Palestra: A Nova Era do Dinheiro: Quando a Máquina Aprende a Investir Melhor que Você ",
     speaker: "José Jeovane Reges Cordeiro",
     day: "Dia 2-13/06/25",
-    time: "08:00 - 09:00",
+    time: "08:00- 09:00",
     location: "AUDITÓRIO 1",
     description: "O palestrante abordará a aplicação de algoritmos inteligentes no mercado financeiro, explorando como as máquinas poderão tomar decisões de investimento mais eficientes do que humanos, e quais são os desafios éticos e técnicos envolvidos."
     },
@@ -358,12 +358,12 @@ export const lecturesData = [
     description: "Esta palestra apresentará o Projeto Athena, que busca promover a inclusão e o engajamento de meninas e mulheres na área da engenharia elétrica, mostrando ações práticas e resultados já alcançados."
     },
      {
-    title: "Palestra Heloisa",
-    speaker: "Heloisa",
+    title: "IA como Passaporte: O que vi na Europa e como você pode chegar lá também",
+    speaker: "Heloisa Guimarães Coelho",
     day: "Dia 2-13/06/25",
     time: "15:00 - 16:00",
     location: "AUDITÓRIO 1",
-    description: ""
+    description: "Nesta palestra, Heloísa Guimarães Coelho apresentará suas experiências internacionais relacionadas à inteligência artificial, compartilhando aprendizados adquiridos na Europa."
     },
     {
     title: "Web para Todos: Design Acessível e o Papel da Computação na Inclusão ",

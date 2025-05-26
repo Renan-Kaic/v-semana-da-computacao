@@ -158,12 +158,20 @@ const SelectableEventBlocks = ({ eventType, onChange, selectedEvents = [] }: Sel
         <div className="mt-4">
           <p className="text-sm text-gray-700 mb-4">Jogos em grupo como <strong>Brawl Stars</strong> e <strong>CS 1.6</strong> devem ser inscritos separadamente:</p>
           <a
-            href={groupGamesLink}
+            href="https://forms.gle/Dei1itv9aPKZh4H79"
             target="_blank"
             rel="noopener noreferrer"
             className="flex justify-center px-4 py-2 bg-[#1A1F2C] text-white rounded-md hover:bg-blue-700 transition-colors"
           >
-            Inscrever equipe para jogos em grupo
+            Brawl Stars
+          </a>
+           <a
+            href="https://forms.gle/K23o54639YiGqxmn8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center px-4 py-2 bg-[#1A1F2C] text-white rounded-md hover:bg-blue-700 transition-colors mt-2"
+          >
+            CS 1.6
           </a>
         </div>
       )} 
