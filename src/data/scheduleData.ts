@@ -50,10 +50,10 @@ export const scheduleDay1: ScheduleItem[] = [
   },
    {
     time: "14:00 - 18:00",
-    location: "LAB 1",
+    location: "LARAS",
     activity: "Oficina Bits de Ada: Introdução de Arduino",
-    speakers: "",
-    responsible: ""
+    speakers: "Yasmin",
+    responsible: "Yasmin"
   },
   {
     time: "14:00 - 18:00",
@@ -93,7 +93,7 @@ export const scheduleDay1: ScheduleItem[] = [
   { 
     time: "17:00 - 18:00",
     location: "Hall",
-    activity: "Oficina Cultural 1",
+    activity: "Oficina Cultural ",
     speakers: "",
     responsible: ""
   }
@@ -180,7 +180,7 @@ export const scheduleDay2: ScheduleItem[] = [
  {
     time: "17:00 - 18:00",
     location: "Hall",
-    activity: "Oficina Cultural 2 ",
+    activity: "Oficina Cultural ",
     speakers: "",
     responsible: ""
   }
@@ -236,10 +236,10 @@ export const MinicursosData = [
   },
   {
     title: "Bits de Ada: Introdução de Arduino",
-    instructor: "",
+    instructor: "Yasmin",
     day: "Dia 1-12/06/25",
     time: "14:00 - 18:00",
-    location: "LAB 1",
+    location: "LARAS",
     description: " Esta oficina visa introduzir os conceitos de eletrônica e programação utilizando a plataforma Arduino, com foco em promover o protagonismo feminino na tecnologia"
   },
   {

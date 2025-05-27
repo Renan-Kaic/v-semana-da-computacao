@@ -28,7 +28,7 @@ const Navbar = () => {
     <header className="sticky top-0 bg-white shadow-sm z-50">
       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="text-xl font-semibold text-event-purple">
-          V SCC-IFMA
+          SEMCOMP
         </Link>
 
         {/* Desktop Navigation */}
