@@ -74,7 +74,7 @@ const TorneioJogos = () => {
       style: "Futebol Virtual",
       image: "/assets/img/fifa.jpg",
       organizer: ["Ramon", "Italo"],
-      conditions: ["Tempo: 6 minutos por partida", "Dificuldade: Profissional", "Times: Atualizados"],
+      conditions: ["Tempo: 6 minutos por partida", "Dificuldade: Normal", "Times: Atualizados"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "primary-blue",
     },
