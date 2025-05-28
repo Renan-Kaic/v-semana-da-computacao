@@ -29,10 +29,10 @@ const TorneioJogos = () => {
       image: "/assets/img/naruto.webp",
       organizer: ["Guilherme", "Mesquita"],
       conditions: ["Modo: 1v1 (Eliminatórias simples)",
-  "Plataforma: PC (com controles fornecidos ou próprios)",
-  "Partida: 1 luta (melhor de 2 rounds), quartas de final melhor de 5",
-  "Tempo de round: 90 segundos",
-  "Stage Select: Aleatório"],
+        "Plataforma: PC (com controles fornecidos ou próprios)",
+        "Partida: 1 luta (melhor de 2 rounds), quartas de final melhor de 5",
+        "Tempo de round: 90 segundos",
+        "Stage Select: Aleatório"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "event-purple",
     },
@@ -237,7 +237,7 @@ const TorneioJogos = () => {
               {games.map((game, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg overflow-hidden border shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-5px]"
+                  className="bg-white rounded-lg overflow-hidden border shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-5px] flex flex-col"
                   style={{ borderColor: getGameColors(game.color).border }}
                 >
                   <div
@@ -247,46 +247,58 @@ const TorneioJogos = () => {
                     <span>{game.icon}</span>
                     <h3 className="ml-2 text-xl font-semibold">{game.name}</h3>
                   </div>
-                  <div className="p-0">
-                    <div className="w-full">
-                      <img src={game.image || "/placeholder.svg"} alt={game.name} className="w-full object-cover" />
-                    </div>
-                    <div className="space-y-3 p-5">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-600">Formato:</span>
-                        <span className="text-gray-800">{game.format}</span>
+
+                  <div className="flex flex-col flex-grow">
+                    <img src={game.image || "/placeholder.svg"} alt={game.name} className="w-full object-cover" />
+
+                    <div className="flex flex-col flex-grow p-5">
+                      <div className="flex-grow space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-gray-600">Formato:</span>
+                          <span className="text-gray-800">{game.format}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-gray-600">Organizadores:</span>
+                          <span className="text-gray-800">{game.organizer.join(", ")}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-gray-600">Horário:</span>
+                          <span className="text-gray-800">{game.time}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-gray-600">Local:</span>
+                          <span className="text-gray-800">{game.location}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-gray-600">Vagas:</span>
+                          <Badge
+                            variant="outline"
+                            style={{
+                              color: getGameColors(game.color).bg,
+                              borderColor: getGameColors(game.color).border,
+                            }}
+                          >
+                            {game.slots} jogadores
+                          </Badge>
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-gray-600 mb-2">Condições:</h4>
+                          <ul className="text-gray-800 space-y-1 text-sm">
+                            {game.conditions.map((condition, i) => (
+                              <li key={i}>{condition}</li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-600">Organizadores:</span>
-                        <span className="text-gray-800">{game.organizer.join(", ")}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-600">Horário:</span>
-                        <span className="text-gray-800">{game.time}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-600">Local:</span>
-                        <span className="text-gray-800">{game.location}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-600">Vagas:</span>
-                        <Badge
-                          variant="outline"
-                          style={{
-                            color: getGameColors(game.color).bg,
-                            borderColor: getGameColors(game.color).border,
-                          }}
+
+                      <div className="flex justify-center mt-auto pt-6">
+                        <a
+                          href={`/assets/docs/Regras-Campeonato-${game.name.toLowerCase().replace(/ /g, "-")}.pdf`}
+                          download
+                          className="px-6 py-3 bg-[#4169E1] text-white rounded-md shadow-sm hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2"
                         >
-                          {game.slots} jogadores
-                        </Badge>
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-600 mb-2">Condições:</h4>
-                        <ul className="text-gray-800 space-y-1 text-sm">
-                          {game.conditions.map((condition, i) => (
-                            <li key={i}>{condition}</li>
-                          ))}
-                        </ul>
+                          <span>Baixar Regulamento {game.name}</span>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -294,6 +306,7 @@ const TorneioJogos = () => {
               ))}
             </div>
           </div>
+
 
           {/* Regras e Penalidades */}
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-16">
@@ -336,7 +349,7 @@ const TorneioJogos = () => {
 
             <div className="flex justify-center mt-8">
               <a
-                href="src/assets/docs/regulamento_oficial.pdf"
+                href="/assets/docs/regulamento_oficial.pdf"
                 download
                 className="px-6 py-3 bg-[#4169E1] text-white rounded-md shadow-sm hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2"
               >

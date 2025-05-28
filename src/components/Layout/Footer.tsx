@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-bold text-event-purple">V SCC-IFMA</h3>
+            <h3 className="text-xl font-bold text-event-purple">SEMCOMP</h3>
             <p className="text-gray-600 mt-1">V Semana da Ciência da Computação</p>
           </div>
           

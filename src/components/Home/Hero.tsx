@@ -10,19 +10,27 @@ const Hero = () => {
             12 a 14 de Junho de 2025 - IFMA campus Caxias
           </span>
         </div>
-        
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <span className="gradient-text">V Semana de Ciência</span>
-          <br />
-          <span className="text-gray-900">da Computação</span>
-        </h1>
-        
+
+        <div className="relative inline-block">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <span className="gradient-text">V Semana de Ciência</span>
+            <br />
+            <span className="text-gray-900">da Computação</span>
+          </h1>
+
+          <img
+            src="/assets/img/icon_semana_bg.png"
+            alt="Celebro de Circuito"
+            className="block mx-auto mb-6 md:mb-0 md:block md:absolute md:-top-24 md:right-[-80px] md:w-40 w-24"
+          />
+        </div>
+
         <p className="text-gray-600 max-w-2xl mx-auto mb-8 px-4">
           Junte-se a especialistas e entusiastas para uma semana de
           descobertas, aprendizados e networking no maior evento de
           computação de IFMA campus Caxias.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
           <Link
             to="/inscricao"

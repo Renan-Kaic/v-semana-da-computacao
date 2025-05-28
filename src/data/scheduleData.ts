@@ -64,7 +64,7 @@ export const scheduleDay1: ScheduleItem[] = [
   },
   {
     time: "14:00 - 18:00",
-    location: "LAB eletrônica",
+    location: "LAB ELETRÔNICA",
     activity: "Oficina de Circuitos Digiais",
     speakers: "Prof. Luis Claudio Mendes Chaves",
     responsible: "Prof. Luis Claudio Mendes Chaves"
@@ -158,7 +158,7 @@ export const scheduleDay2: ScheduleItem[] = [
   },
   {
     time: "14:00 - 18:00",
-    location: "LAB eletrônica",
+    location: "LAB ELETRÔNICA",
     activity: "Oficina de Circuitos Digiais",
     speakers: "Prof. Luis Claudio Mendes Chaves",
     responsible: "Prof. Luis Claudio Mendes Chaves"
@@ -247,7 +247,7 @@ export const MinicursosData = [
     instructor: "Prof. Luis Claudio Mendes Chaves",
     day: "Dia 1-12/06/25 e Dia 2-13/06/25",
     time: "14:00 -  18:00",
-    location: "LAB Eletrônica",
+    location: "LAB ELETRÔNICA",
     description: "Focada na lógica digital, esta oficina abordara o funcionamento de circuitos eletrônicos fundamentais como portas lógicas."
   },
   {
