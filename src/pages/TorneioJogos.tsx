@@ -13,8 +13,7 @@ const TorneioJogos = () => {
       slots: 24,
       style: "Mata-Mata 3v3",
       image: "/assets/img/Brawl_Stars_iOS_ícone.jpg",
-      organizer: ["Everson", "Alan"],
-      conditions: ["Modo: Mata-Mata (3v3)", "Mapas: Sorteados previamente", "Duração: 2 minutos por partida"],
+      conditions: ["Modo: Mata-Mata (3v3)", "Mapas: Predefinidos", "Duração: 2 minutos por partida"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "primary-blue",
     },
@@ -22,17 +21,14 @@ const TorneioJogos = () => {
       name: "Naruto",
       format: "Duelo 1x1",
       time: "10:00 - 12:00",
-      turno: "manha",
+      turno: "manha", 
       location: "Lab 1",
       slots: 32,
-      style: "Versus",
+      style: "Versus(1v1)",
       image: "/assets/img/naruto.webp",
-      organizer: ["Guilherme", "Mesquita"],
-      conditions: ["Modo: 1v1 (Eliminatórias simples)",
-        "Plataforma: PC (com controles fornecidos ou próprios)",
-        "Partida: 1 luta (melhor de 2 rounds), quartas de final melhor de 5",
-        "Tempo de round: 90 segundos",
-        "Stage Select: Aleatório"],
+      conditions: ["Modo: Versus 1v1 ",
+        "Personagens: Todos liberados",
+        "Duração: 90 segundos por round"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "event-purple",
     },
@@ -45,7 +41,6 @@ const TorneioJogos = () => {
       slots: 32,
       style: "Eliminação",
       image: "/assets/img/mortal-kombat.jpg",
-      organizer: ["Diego", "Kauã Felipe"],
       conditions: ["Modo: Torneio (1v1)", "Vida: 100%", "Duração: 90 segundos por round"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "secondary-blue",
@@ -59,8 +54,7 @@ const TorneioJogos = () => {
       slots: 24,
       style: "Combate por rodadas",
       image: "/assets/img/cs-1.6.jpg",
-      organizer: ["Ciclano", "Fulano"],
-      conditions: ["Mapa: de_dust2", "Rodadas: Eliminação", "Tempo: 1:45 por round"],
+      conditions: ["Mapa disponíveis: de_dust2, de_inferno, de_nuke, de_train, de_aztec ", "Rodadas:MD1 E MD3"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "accent-blue",
     },
@@ -73,7 +67,6 @@ const TorneioJogos = () => {
       slots: 16,
       style: "Futebol Virtual",
       image: "/assets/img/fifa.jpg",
-      organizer: ["Ramon", "Italo"],
       conditions: ["Tempo: 6 minutos por partida", "Dificuldade: Normal", "Times: Atualizados"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "primary-blue",
@@ -87,7 +80,6 @@ const TorneioJogos = () => {
       slots: 16,
       style: "Corrida",
       image: "/assets/img/mario-kart.jpg",
-      organizer: ["João Carlos", "Yan"],
       conditions: ["Corridas: 3 voltas", "Itens: Todos ativos", "Personagens: Livre escolha"],
       icon: <Gamepad className="w-6 h-6" />,
       color: "event-purple",
@@ -101,7 +93,6 @@ const TorneioJogos = () => {
       slots: 12,
       style: "Dança",
       image: "/assets/img/just-dance.jpg",
-      organizer: ["Vinicius Yan"],
       conditions: [
         "Modo de Jogo: Todas as partidas serão no modo individual (solo).",
         "Seleção de Músicas: As músicas de cada fase serão definidas pela organização, podendo vir de uma lista prévia ou serem sorteadas, sempre na dificuldade padrão (a não ser que a organização indique outra).",
@@ -134,6 +125,14 @@ const TorneioJogos = () => {
       title: "§3º Irregularidades administrativas",
       items: ["Uso de contas compartilhadas", "Desrespeito às decisões da organização"],
     },
+    {
+      title: "§4º Identificação",
+      items: [
+        "Apresentação de documento original com foto",
+        "Divergência entre cadastro e documento físico",
+        "Uso de documentos não oficiais ou expirados"
+      ]
+    }
   ]
 
   const penaltyLevels = [
@@ -177,12 +176,16 @@ const TorneioJogos = () => {
             </p>
           </div>
 
+          
+          
           {/* Datas e horários */}
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-16">
             <div className="flex items-center mb-6">
               <Flag className="mr-3 text-[#4169E1]" />
               <h2 className="text-2xl font-bold">Datas e Horários</h2>
             </div>
+
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-gray-50 p-5 rounded-md shadow-sm border border-gray-200">
                 <h3 className="text-[#4169E1] font-semibold mb-2">Data</h3>
@@ -199,6 +202,28 @@ const TorneioJogos = () => {
             </div>
           </div>
 
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-16">
+  <div className="flex items-center mb-6">
+    <Badge className="mr-3 text-[#4169E1]" />
+    <h2 className="text-2xl font-bold">Identificação Obrigatória</h2>
+  </div>
+  <div className="bg-yellow-50 p-5 rounded-md border border-yellow-200">
+    <h3 className="text-lg font-semibold mb-3 text-yellow-800">Atenção Participantes!</h3>
+    <ul className="list-disc pl-5 space-y-2 text-yellow-700">
+      <li>É obrigatória a apresentação de documento de identidade original com foto (RG, CNH ou Passaporte)</li>
+      <li>A identificação deve ser apresentada no credenciamento</li>
+      <li>Não será permitido o uso de documentos digitais ou fotocópias</li>
+      <li>Dados devem coincidir com o cadastro da inscrição</li>
+    </ul>
+    <div className="mt-4 p-3 bg-white rounded border border-yellow-200">
+      <p className="text-sm text-yellow-600">
+        <strong>Penalidade:</strong> Não apresentação resultará em desclassificação imediata
+      </p>
+    </div>
+  </div>
+</div>
+
+
           {/* Resposaveis Pelo Evento */}
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-16">
             <div className="flex items-center mb-6">
@@ -207,22 +232,18 @@ const TorneioJogos = () => {
             </div>
             <div>
               <h2 className="text-2xl font-bold">Coordenação Geral: </h2>
-              <h3 className="text-2xl mb-4">Mesquita e Berg</h3>
+              <h3 className="text-2xl mb-4">Francisco Eduardo Mesquita Ferreira e Berg Arnaldo De Morais Lima</h3>
 
               <h2 className="text-2xl font-bold">Comissão Técnica: </h2>
               <ul className="list-disc pl-5 text-gray-700">
-                <li>Everson</li>
-                <li>Alan</li>
-                <li>Guilherme</li>
-                <li>Mesquita</li>
-                <li>Diego</li>
-                <li>Kauã Felipe</li>
-                <li>Ciclano</li>
-                <li>Fulano</li>
-                <li>Ramon</li>
-                <li>Italo</li>
-                <li>João Carlos</li>
-                <li>Yan</li>
+                <li>Alan Vieira Da Silva</li>
+                <li>Everson Borges Mota</li>
+                <li>Diego Dos Santos Silva</li>
+                <li>Guilherme Ferreira De Sousa</li>
+                <li>João Carlos Furtado De Sousa</li>
+                <li>Kauãn Felipe Gaia Silva</li>
+                <li>Ramno Aragão De Sousa</li>
+                <li>Vinicius Yan Sousa Melo</li>
               </ul>
             </div>
           </div>
@@ -256,10 +277,6 @@ const TorneioJogos = () => {
                         <div className="flex justify-between items-center">
                           <span className="font-medium text-gray-600">Formato:</span>
                           <span className="text-gray-800">{game.format}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="font-medium text-gray-600">Organizadores:</span>
-                          <span className="text-gray-800">{game.organizer.join(", ")}</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="font-medium text-gray-600">Horário:</span>
