@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout"
 import { Badge } from "@/components/ui/badge"
-import { Gamepad, Shield, Flag, Info, ClipboardList } from "lucide-react"
+import { Gamepad, Shield, Flag, Info, ClipboardList, IdCard } from "lucide-react"
 
 const TorneioJogos = () => {
   const games = [
@@ -21,7 +21,7 @@ const TorneioJogos = () => {
       name: "Naruto",
       format: "Duelo 1x1",
       time: "10:00 - 12:00",
-      turno: "manha", 
+      turno: "manha",
       location: "Lab 1",
       slots: 32,
       style: "Versus(1v1)",
@@ -176,8 +176,8 @@ const TorneioJogos = () => {
             </p>
           </div>
 
-          
-          
+
+
           {/* Datas e horários */}
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-16">
             <div className="flex items-center mb-6">
@@ -185,7 +185,7 @@ const TorneioJogos = () => {
               <h2 className="text-2xl font-bold">Datas e Horários</h2>
             </div>
 
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-gray-50 p-5 rounded-md shadow-sm border border-gray-200">
                 <h3 className="text-[#4169E1] font-semibold mb-2">Data</h3>
@@ -202,26 +202,27 @@ const TorneioJogos = () => {
             </div>
           </div>
 
+          {/* Identificação Obrigatória */}
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-16">
-  <div className="flex items-center mb-6">
-    <Badge className="mr-3 text-[#4169E1]" />
-    <h2 className="text-2xl font-bold">Identificação Obrigatória</h2>
-  </div>
-  <div className="bg-yellow-50 p-5 rounded-md border border-yellow-200">
-    <h3 className="text-lg font-semibold mb-3 text-yellow-800">Atenção Participantes!</h3>
-    <ul className="list-disc pl-5 space-y-2 text-yellow-700">
-      <li>É obrigatória a apresentação de documento de identidade original com foto (RG, CNH ou Passaporte)</li>
-      <li>A identificação deve ser apresentada no credenciamento</li>
-      <li>Não será permitido o uso de documentos digitais ou fotocópias</li>
-      <li>Dados devem coincidir com o cadastro da inscrição</li>
-    </ul>
-    <div className="mt-4 p-3 bg-white rounded border border-yellow-200">
-      <p className="text-sm text-yellow-600">
-        <strong>Penalidade:</strong> Não apresentação resultará em desclassificação imediata
-      </p>
-    </div>
-  </div>
-</div>
+            <div className="flex items-center mb-6">
+              <IdCard className="mr-3 text-[#4169E1]" />
+              <h2 className="text-2xl font-bold">Identificação Obrigatória</h2>
+            </div>
+            <div className="bg-yellow-50 p-5 rounded-md border border-yellow-200">
+              <h3 className="text-lg font-semibold mb-3 text-yellow-800">Atenção Participantes!</h3>
+              <ul className="list-disc pl-5 space-y-2 text-yellow-700">
+                <li>É obrigatória a apresentação de documento de identidade original com foto (RG, CNH ou Passaporte)</li>
+                <li>A identificação deve ser apresentada no credenciamento</li>
+                <li>Não será permitido o uso de documentos digitais ou fotocópias</li>
+                <li>Dados devem coincidir com o cadastro da inscrição</li>
+              </ul>
+              <div className="mt-4 p-3 bg-white rounded border border-yellow-200">
+                <p className="text-sm text-yellow-600">
+                  <strong>Penalidade:</strong> Não apresentação resultará em desclassificação imediata
+                </p>
+              </div>
+            </div>
+          </div>
 
 
           {/* Resposaveis Pelo Evento */}
